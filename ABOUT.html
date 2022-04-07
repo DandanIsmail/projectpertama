@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ABOUT</title>
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        
+        .container{
+            width: 100%;
+            box-sizing: border-box;
+        }
+        /* ini img */
+        .container img {
+           
+           width: 300px;
+           padding-top: 30px;
+           padding-left: 34%;
+           
+        } 
+        /* ini card */
+        .container .card {
+            width: 600px;
+            height: 200px;
+            margin: auto;
+           box-sizing: border-box;
+           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .7);
+          
+        }
+        h2 {
+            padding-left: 20px;
+            padding-top: 20px;
+            color: black;
+        }
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            color: black;
+        }
+
+        .footer2 {
+            width: 100%;
+	        height: 30px;
+	        background-color: goldenrod;
+	        text-align: center;
+	        font-size: 15px;
+	        padding-top: 13px;
+            margin-top: 90px;
+        }
+        /* ini navbar */
+        nav {
+	    display: flex;
+	    background-color: goldenrod;
+	    justify-content: space-around;
+	    /*padding: 20px 0;*/
+	    height: 50PX;
+	    align-items: center;
+	    
+
+}
+nav .logo {
+	color: whitesmoke;
+	font-family: cursive;
+	font-size: 20px;
+}
+nav ul {
+	display: flex;
+	list-style: none;
+	width: 40%;
+	justify-content: space-between;
+}
+nav ul li a {
+	color: whitesmoke;
+	text-decoration: none;
+	
+
+}
+
+
+nav ul li a:hover {
+	color: black;
+	font-size: 24px;
+	opacity: .3;
+	height: 40px;
+	transition: 1s;
+}
+.active{
+    color: black;
+	font-size: 20px;
+	opacity: .3;
+}
+/* ini menu humberger */
+.menu-toggle{
+	
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	background-color: goldenrod;
+	position: relative;
+	display: none;
+}
+.menu-toggle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left: -5px;
+	top: -3px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 99999999;
+}
+.menu-toggle span {
+display: block;
+width: 28px;
+height: 3px;
+background-color: whitesmoke;
+border-radius: 3px;
+
+}
+/* responsive */
+/* tablet */
+@media (max-width: 768px) {
+	nav ul {
+		width: 50%;
+	}
+}
+/* mobile */
+@media (max-width: 576px) {
+	.menu-toggle{
+		display: flex;
+		z-index: 9999;
+	}
+	nav ul {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 90%;
+		height: 100vh;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		background-color: goldenrod;
+		z-index: 134;
+		transform: translateX(100%);
+		transition: all 1s;
+		opacity: 0;
+	}
+	nav ul.slide {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h4>I-con thrift</h4>
+            </div>
+    
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a class="active" href="#">ABOUT</a></li>
+                <li><a href="PRODUCT.html">PRODUCT</a></li>
+                <li><a href="CONTACT.html">CONTACT</a></li>
+                
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <img src="logoi.PNG.png">
+
+        <div class="card">
+            <h2>Icon thrift</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quasi sunt dignissimos sed, hic consectetur quidem nam doloribus itaque molestiae. Natus hic numquam maxime? Magni labore tempora molestiae doloremque aliquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore asperiores, expedita numquam et ab facilis voluptatum officia, provident voluptatem dolorum assumenda placeat ea ipsam voluptatibus nesciunt laborum cupiditate vel neque.
+            </p>
+        </div>
+
+        <div class="footer2">
+            <h5> © copyright icon thrift 2022</h5>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
